@@ -1,0 +1,206 @@
+{
+  "tittle": "Register service",
+  "steps": {
+      "step1": "Customer info",
+      "step2": "Locale info",
+      "step3": "Services and period",
+      "step4": "Register service info",
+      "step5": "Payment"
+  },
+  "form": {
+      "form1": {
+          "field1": "Organization/Business name",
+          "plhr1": "Enter organization/business name",
+          "field2": "Tax code",
+          "plhr2": "Enter tax code",
+          "field3": "Address",
+          "plhr3": "Enter address",
+          "field4": "Legal representative",
+          "plhr4": "Enter legal representative",
+          "field5": "Email",
+          "plhr5": "Enter email",
+          "field6": "Phone number",
+          "plhr6": "Enter phone number",
+          "field7": "Industry/Fields",
+          "plhr7": "Enter industry/fields"
+      },
+      "form2": {
+          "tittle": "Locale",
+          "field1": "Locale name",
+          "plhr1": "Enter locale name",
+          "field2": "Phone number",
+          "plhr2": "Enter phone number",
+          "field3": "Date installation",
+          "plhr3": "Select date installation",
+          "field4": "Province",
+          "plhr4": "Select province",
+          "field5": "District",
+          "plhr5": "Select district",
+          "field6": "Ward",
+          "plhr6": "Select ward",
+          "field7": "Street",
+          "plhr7": "Enter street",
+          "field8": "Address detail",
+          "plhr8": "Enter address detail",
+          "field9": "Equipment quantity (One device per fire alarm panel)",
+          "plhr9": "Enter equipment quantity"
+      },
+      "form3": {
+          "tittle": "Locale",
+          "label1": "Service package",
+          "label2": "Period",
+          "package1": {
+              "des1": "GSafe Security Package",
+              "des2": "2 device maintenance times/year",
+              "des3": "5 mobile app access account",
+              "des4": "5 phone number to receive fire alert messages",
+              "des5": "Caution",
+              "des6": "For public educational and healthcare customers only"
+          },
+          "package2": {
+              "des1": "GSafe G500 Package",
+              "des2": "2 device maintenance times/year",
+              "des3": "10 mobile app access account",
+              "des4": "10 phone number to receive fire alert messages"
+          },
+          "package3": {
+              "des1": "GSafe G400 Package",
+              "des2": "1 device maintenance time/year",
+              "des3": "5 mobile app access account",
+              "des4": "5 phone number to receive fire alert messages"
+          },
+          "package4": {
+              "des1": "GSafe G300 Package",
+              "des2": "1 device maintenance time/year",
+              "des3": "2 mobile app access account",
+              "des4": "2 phone number to receive fire alert messages"
+          },
+          "prices": {
+              "package1": {
+                  "price1": "2.400 VND / 12 months",
+                  "price2": "4.800 VND / 24 months",
+                  "price3": "7.200 VND / 36 months"
+              },
+              "package2": {
+                  "price1": "6.000 VND / 12 months",
+                  "price2": "12.000 VND / 24 months",
+                  "price3": "18.000 VND / 36 months"
+              },
+              "package3": {
+                  "price1": "4.800 VND / 12 months",
+                  "price2": "9.600 VND / 24 months",
+                  "price3": "14.400 VND / 36 months"
+              },
+              "package4": {
+                  "price1": "3.600 VND / 12 months",
+                  "price2": "7.200 VND / 24 months",
+                  "price3": "10.800 VND / 36 months"
+              }
+          }
+      },
+      "form4": {
+          "tittle": "Locale",
+          "field1": "User name",
+          "plhr1": "Enter user name",
+          "field2": "Phone number",
+          "plhr2": "Enter phone number"
+      },
+      "form5": {
+          "panel1": {
+              "tittle": "Order info",
+              "des1": "GSAFE INCIDENT REPORTING SYSTEM - Model: G6",
+              "des11": "Set",
+              "des2": "Cellphone plan from device 2",
+              "des21": "Package",
+              "des22": "Month",
+              "des3": "Total",
+              "des31": "VND",
+              "des4": "Total order not includes VAT",
+              "des41": "VAT (10 %)",
+              "des5": "Total invoice includes VAT",
+              "para1": "My organization company is exempted from vat (",
+              "para2": "Require",
+              "para3": ":  Investment registration certificate must be provided when signing the contract.)"
+          },
+          "panel2": {
+              "tittle": "Invoice info",
+              "field1": "Company name",
+              "plhr1": "Enter company name",
+              "field2": "Phone number",
+              "plhr2": "Enter phone number",
+              "field3": "Address",
+              "plhr3": "Enter address",
+              "field4": "Email to receive invoice",
+              "plhr4": "Enter email to receive invoice",
+              "field5": "Tax code",
+              "plhr5": "Enter tax code",
+              "field6": "Payment method",
+              "choice1": "Pay now",
+              "choice2": "Pay later",
+              "para1": "I have read and agree to",
+              "para2": "Term and conditions"
+          },
+          "message": {
+              "success1": "Order created successfully",
+              "success2": "Please check email and complete payment"
+          }
+      }        
+  },
+  "alerts": {
+      "form1": {
+          "alert1": "Organization/Business name must be not empty",
+          "alert2": "Tax code must be not empty",
+          "alert21": "Tax code is invalid",
+          "alert3": "Address must be not empty",
+          "alert4": "Legal representative must be not empty",
+          "alert5": "Email must be not empty",
+          "alert51": "Email is invalid",
+          "alert6": "Phone number must be not empty",
+          "alert61": "Phone number is invalid"
+      },
+      "form2": {
+          "alert1": "Locale name must be not empty",
+          "alert2": "Phone number must be not empty",
+          "alert21": "Phone number is invalid",
+          "alert22": "Phone number is duplicated",
+          "alert3": "Date installation must be not empty",
+          "alert4": "Province must be not empty",
+          "alert5": "District must be not empty",
+          "alert6": "Ward must be not empty",
+          "alert7": "Street must be not empty",
+          "alert8": "Address detail must be not empty",
+          "alert9": "Equipment quantity must be greater than 1"
+      },
+      "form3": {
+          "alert1": "Services and period must be not empty"
+      },
+      "form4": {
+          "alert1": "User name must be not empty",
+          "alert2": "Phone number must be not empty",
+          "alert21": "Phone number is invalid",
+          "alert3": "Phone number is duplicated"
+      },
+      "form5": {
+          "alert1": "Company name must be not empty",
+          "alert2": "Phone number must be not empty",
+          "alert21": "Phone number is invalid",
+          "alert3": "Phone number is duplicated",
+          "alert4": "Address must be not empty",
+          "alert5": "Email must be not empty",
+          "alert51": "Email is invalid",
+          "alert6": "Tax code must be not empty",
+          "alert61": "Tax code is invalid",
+          "alert7": "Payment method must be not empty"
+      }
+  },
+  "controls": {
+      "cn1": "Next",
+      "cn2": "Previous",
+      "cn3": "Add locale",
+      "cn4": "Delete",
+      "cn5": "Add phone number",
+      "cn6": "Pay",
+      "cn7": "Complete",
+      "cn8": "QR code created"
+  }
+}

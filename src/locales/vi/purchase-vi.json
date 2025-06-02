@@ -1,0 +1,205 @@
+{
+    "tittle": "Đăng ký dịch vụ",
+    "steps": {
+        "step1": "Thông tin khách hàng",
+        "step2": "Thông tin cơ sở lắp đặt",
+        "step3": "Gói dịch vụ và chu kỳ",
+        "step4": "Đăng ký thông tin sử dụng dịch vụ",
+        "step5": "Thanh toán đơn hàng"
+    },
+    "form": {
+        "form1": {
+            "field1": "Tên tổ chức/doanh nghiệp",
+            "plhr1": "Nhập tên tổ chức/doanh nghiệp",
+            "field2": "Mã số thuế",
+            "plhr2": "Nhập mã số thuế",
+            "field3": "Địa chỉ",
+            "plhr3": "Nhập địa chỉ",
+            "field4": "Người đại diện pháp luật",
+            "plhr4": "Nhập người đại diện pháp luật",
+            "field5": "Email",
+            "plhr5": "Nhập email",
+            "field6": "Số điện thoại",
+            "plhr6": "Nhập số điện thoại",
+            "field7": "Lĩnh vực/ngành nghề",
+            "plhr7": "Nhập lĩnh vực/ngành nghề"
+        },
+        "form2": {
+            "tittle": "Cơ sở",
+            "field1": "Tên cơ sở",
+            "plhr1": "Nhập tên cơ sở",
+            "field2": "Số điện thoại",
+            "plhr2": "Nhập số điện thoại",
+            "field3": "Ngày lắp đặt",
+            "plhr3": "Chọn ngày lắp đặt",
+            "field4": "Tỉnh/thành phố",
+            "plhr4": "Chọn tỉnh/thành phố",
+            "field5": "Huyện",
+            "plhr5": "Chọn huyện",
+            "field6": "Xã/phường/thị trấn",
+            "plhr6": "Chọn xã/phường/thị trấn",
+            "field7": "Đường/phố",
+            "plhr7": "Nhập đường/phố",
+            "field8": "Địa chỉ chi tiết",
+            "plhr8": "Nhập địa chỉ chi tiết",
+            "field9": "Số thiết bị (1 thiết bị mỗi tủ báo cháy)",
+            "plhr9": "Nhập số thiết bị"
+        },
+        "form3": {
+            "tittle": "Cơ sở",
+            "label1": "Gói dịch vụ",
+            "label2": "Thời hạn",
+            "package1": {
+                "des1": "Gói cước GSafe An Sinh",
+                "des2": "2 lần bảo trì thiết bị/năm",
+                "des3": "5 tài khoản truy cập ứng dụng trên điện thoại",
+                "des4": "5 số điện thoại nhận tin nhắn cảnh báo cháy",
+                "des5": "Lưu ý",
+                "des6": "Chỉ dành cho khách hàng là cơ sở giáo dục, y tế công lập"
+            },
+            "package2": {
+                "des1": "Gói cước GSafe G500",
+                "des2": "2 lần bảo trì thiết bị/năm",
+                "des3": "10 tài khoản truy cập ứng dụng trên điện thoại",
+                "des4": "10 số điện thoại nhận tin nhắn cảnh báo cháy"
+            },
+            "package3": {
+                "des1": "Gói cước GSafe G400",
+                "des2": "1 lần bảo trì thiết bị/năm",
+                "des3": "5 tài khoản truy cập ứng dụng trên điện thoại",
+                "des4": "5 số điện thoại nhận tin nhắn cảnh báo cháy"
+            },
+            "package4": {
+                "des1": "Gói cước GSafe G300",
+                "des2": "1 lần bảo trì thiết bị/năm",
+                "des3": "2 tài khoản truy cập ứng dụng trên điện thoại",
+                "des4": "2 số điện thoại nhận tin nhắn cảnh báo cháy"
+            },
+            "prices": {
+                "package1": {
+                    "price1": "2.400 VND / 12 tháng",
+                    "price2": "4.800 VND / 24 tháng",
+                    "price3": "7.200 VND / 36 tháng"
+                },
+                "package2": {
+                    "price1": "6.000 VND / 12 tháng",
+                    "price2": "12.000 VND / 24 tháng",
+                    "price3": "18.000 VND / 36 tháng"
+                },
+                "package3": {
+                    "price1": "4.800 VND / 12 tháng",
+                    "price2": "9.600 VND / 24 tháng",
+                    "price3": "14.400 VND / 36 tháng"
+                },
+                "package4": {
+                    "price1": "3.600 VND / 12 tháng",
+                    "price2": "7.200 VND / 24 tháng",
+                    "price3": "10.800 VND / 36 tháng"
+                }
+            }
+        },
+        "form4": {
+            "tittle": "Cơ sở",
+            "field1": "Tên người sử dụng",
+            "plhr1": "Nhập tên người sử dụng",
+            "field2": "Số điện thoại",
+            "plhr2": "Nhập số điện thoại"
+        },
+        "form5": {
+            "panel1": {
+                "tittle": "Thông tin đơn hàng",
+                "des1": "Thiết bị truyền tin báo sự cố - Model: G6",
+                "des11": "Bộ",
+                "des2": "Gói cước từ thiết bị thứ 2",
+                "des21": "Gói",
+                "des22": "Tháng",
+                "des3": "Tổng",
+                "des31": "VND",
+                "des4": "Tổng giá trị trước thuế",
+                "des41": "VAT (10 %)",
+                "des5": "Tổng giá trị thanh toán",
+                "para1": "Tổ chức/Doanh nghiệp thuộc đối tượng chịu thuế suất VAT 0% theo quy định (",
+                "para2": "Yêu cầu",
+                "para3": ": Phải bổ sung giấy chứng nhận đăng ký đầu tư khi ký hợp đồng) "
+            },
+            "panel2": {
+                "tittle": "Thông tin hóa đơn",
+                "field1": "Tên công ty",
+                "plhr1": "Nhập tên công ty",
+                "field2": "Số điện thoại",
+                "plhr2": "Nhập số điện thoại",
+                "field3": "Địa chỉ",
+                "plhr3": "Nhập địa chỉ",
+                "field4": "Email nhận hoá đơn",
+                "plhr4": "Nhập email nhận hoá đơn",
+                "field5": "Mã số thuế",
+                "plhr5": "Nhập mã số thuế",
+                "field6": "Phương thức thanh toán",
+                "choice1": "Thanh toán trả trước",
+                "choice2": "Thanh toán trả sau",
+                "para1": "Tôi đã đọc và đồng ý với",
+                "para2": "Điều khoản sử dụng dịch vụ"
+            },
+            "message": {
+                "success1": "Tạo đơn hàng thành công",
+                "success2": "Vui lòng kiểm tra email và hoàn tất thanh toán"
+            }
+        }        
+    },
+    "alerts": {
+        "form1": {
+            "alert1": "Tên tổ chức/doanh nghiệp không được để trống",
+            "alert2": "Mã số thuế không được để trống",
+            "alert21": "Mã số thuế không hợp lệ",
+            "alert3": "Địa chỉ không được để trống",
+            "alert4": "Người đại diện pháp luật không được để trống",
+            "alert5": "Email không được để trống",
+            "alert51": "Email không hợp lệ",
+            "alert6": "Số điện thoại không được để trống",
+            "alert61": "Số điện thoại không hợp lệ"
+        },
+        "form2": {
+            "alert1": "Tên cơ sở không được để trống",
+            "alert2": "Số điện thoại không được để trống",
+            "alert21": "Số điện thoại không hợp lệ",
+            "alert22": "Số điện thoại bị trùng",
+            "alert3": "Ngày lắp đặt không được để trống",
+            "alert4": "Tỉnh/thành phố không được để trống",
+            "alert5": "Huyện không được để trống",
+            "alert6": "Xã/phường/thị trấn không được để trống",
+            "alert7": "Đường/phố không được để trống",
+            "alert8": "Địa chỉ chi tiết không được để trống",
+            "alert9": "Số thiết bị phải lớn hơn 1"
+        },
+        "form3": {
+            "alert1": "Gói dịch vụ và chu kỳ không được để trống"
+        },
+        "form4": {
+            "alert1": "Tên người sử dụng không được để trống",
+            "alert2": "Số điện thoại không được để trống",
+            "alert21": "Số điện thoại không hợp lệ",
+            "alert3": "Số điện thoại bị trùng"
+        },
+        "form5": {
+            "alert1": "Tên công ty không được để trống",
+            "alert2": "Số điện thoại không được để trống",
+            "alert21": "Số điện thoại không hợp lệ",
+            "alert3": "Địa chỉ không được để trống",
+            "alert4": "Email không được để trống",
+            "alert41": "Email không hợp lệ",
+            "alert5": "Mã số thuế không được để trống",
+            "alert51": "Mã số thuế không hợp lệ",
+            "alert6": "Phương thức thanh toán không được để trống"
+        }
+    },
+    "controls": {
+        "cn1": "Tiếp tục",
+        "cn2": "Quay lại",
+        "cn3": "Thêm cơ sở",
+        "cn4": "Xoá",
+        "cn5": "Thêm số điện thoại",
+        "cn6": "Thanh toán",
+        "cn7": "Hoàn thành",
+        "cn8": "Mã QR đã tạo"
+    }
+}

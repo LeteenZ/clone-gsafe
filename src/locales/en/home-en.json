@@ -1,0 +1,177 @@
+{
+  "navigation": {
+      "letter": "OPEN LETTER",
+      "price": "PRICE LIST",
+      "law": "LEGAL",
+      "guide": "MANUAL",
+      "consult": "Advice",
+      "hotline": "1900232314 branch 1"
+  },
+  "banner": {
+      "tittle": "GSAFE INCIDENT REPORTING SYSTEM",
+      "para": "Utilizing advanced AI & IoT technology, ensuring safe operation for your business",
+      "btn": "Register for installation"
+  },
+  "device_price": {
+      "tittle": "Device & Service Price List",
+      "tittle1": "Choose a service package that suits your needs",
+      "device": {
+          "btn": "VIEW DETAIL",
+          "tittle": "MODEL G6",
+          "price": "6.000.000 VND",
+          "price1": "device (excluding VAT)",
+          "feature": "Compatible with most fire alarm cabinets",
+          "feature1": "Can monitor 03 input signals (Fire alarm, error, button)",
+          "feature2": "Connects to transmit information through 4G and Ethernet",
+          "feature3": "Recognizes broken signal lines connecting to the central fire alarm cabinet",
+          "feature4": "Monitors device status: temperature, power status, battery,...",
+          "feature5": "Activates peripheral devices when there is a fire alarm (light, bell,...)",
+          "tittle2": "FROM THE 2ND DEVICE ONWARDS",
+          "para": "Promotional package price (excluding VAT): 100,000VND / Month / Device",
+          "para1": "These devices will share the same package as the first device (including equivalent features and benefits)"
+      },
+      "feature": {
+          "tittle": "GENERAL FEATURES OF ALL PACKAGES",
+          "feature": "Automatically report fire to the command center of the fire prevention and fighting police force",
+          "feature1": "Online monitoring of device operation status",
+          "feature2": "4G data sim",
+          "feature3": "24/7 customer support"
+      },
+      "price": {
+          "device1": {
+              "tittle": "GSafe G300",
+              "price": "300.000 VND",
+              "price1": "month",
+              "feature": "1 device maintenance times/year",
+              "feature1": "2 mobile app access account",
+              "feature2": "2 phone number to receive fire alert messages"
+          },
+          "device2": {
+              "tittle": "GSafe G400",
+              "price": "400.000 VND",
+              "price1": "month",
+              "feature": "1 device maintenance times/year",
+              "feature1": "5 mobile app access account",
+              "feature2": "5 phone number to receive fire alert messages"
+          },
+          "device3": {
+              "tittle": "GSafe G500",
+              "price": "500.000 VND",
+              "price1": "month",
+              "feature": "2 device maintenance times/year",
+              "feature1": "10 mobile app access account",
+              "feature2": "10 phone number to receive fire alert messages"
+          },
+          "device4": {
+              "tittle": "GSafe An Sinh",
+              "price": "200.000 VND",
+              "price1": "month",
+              "feature": "1 device maintenance times/year",
+              "feature1": "5 mobile app access account",
+              "feature2": "5 phone number to receive fire alert messages"
+          },
+          "btn": "SIGN UP",
+          "note": "(Excluding VAT)",
+          "note1": "Note",
+          "note2": ": The GSafe An Sinh package is only for educational and public health facilities."
+      },
+      "preference": {
+          "tittle": "The offer applies to new customers or those renewing the GSAFE package in 2025, who will receive additional usage time depending on the payment cycle as follows:",
+          "header": "Billing Cycle",
+          "header1": "Extra Months",
+          "para": "12 months",
+          "para1": "24 months",
+          "para11": "36 months",
+          "para2": "1 month",
+          "para22": "3 months",
+          "para222": "5 months"
+      }
+  },
+  "recognize": {
+      "tittle": "CHOSEN BY",
+      "company1": "Construction Company",
+      "company2": "Fire Prevention and Fighting Police Force",
+      "company3": "Tech Solutions",
+      "company4": "Insurance",
+      "company5": "VN Smart City",
+      "comment": "GSafe has helped us raise fire safety standards at all real estate projects. The system is smart and reliable.",
+      "customer": "Dao Thi Hue",
+      "customer1": "Nguyen Van A",
+      "customer11": "Technical Director, Company XYZ"
+  },
+  "details": {
+      "tittle": "Incident reporting device",
+      "tittle1": "GSafe provides a smart fire alarm solution directly connected to the fire prevention and fighting police force, helping to detect and handle fire and explosion incidents early, protecting property and life.",
+      "feature": {
+          "tittle": "4G connection",
+          "para": "Uses a stable 4G network to transmit fire alarm signals even when power is lost or Ethernet is interrupted."
+      },
+      "feature1": {
+          "tittle": "Automatic fire alarm",
+          "para": "Automatically sends incident reports to the command center of the fire prevention and fighting police force as soon as detected."
+      },
+      "feature2": {
+          "tittle": "Mobile application",
+          "para": "Monitor and manage devices remotely via a smart mobile application, receive notifications when incidents occur."
+      },
+      "feature3": {
+          "tittle": "Backup battery",
+          "para": "Integrated backup battery ensures continuous operation even when the grid power is lost."
+      },
+      "tittle2": "HOW IT WORKS",
+      "feature4": {
+          "tittle": "Detect incident",
+          "para": "The communication device receives warning signals from the fire alarm control panel at the facility or building."
+      },
+      "feature5": {
+          "tittle": "Transmit signal",
+          "para": "The system automatically transmits signals to the GEIC monitoring center and the command center of the fire prevention and fighting police force."
+      },
+      "feature6": {
+          "tittle": "Alert",
+          "para": "Automatic warning to the facility owner or person in charge via Autocall or Mobile App."
+      },
+      "feature7": {
+          "tittle": "Handle incident",
+          "para": "Fire forces are mobilized quickly."
+      },
+      "parameter": {
+          "tittle": "TECHNICAL SPECIFICATIONS",
+          "para": "Connection: 4G LTE, Ethernet",
+          "para1": "Power supply: 24VDC",
+          "para2": "Backup battery: Lithium 3, 7V - 5000mAh",
+          "para3": "Size: 100mm x 105mm x 30mm",
+          "para4": "Signal input/output: 3 input channels (fire alarm, error, button)/1 output channel (used for bell or light)"
+      },
+      "benefit": {
+          "tittle": "ADVANTAGES",
+          "para": "Early warning when fire signals occur (via Autocall, Mobile App)",
+          "para1": "Support filtering false fire alarms (reducing fire verification time)",
+          "para2": "24/7 remote online monitoring of communication device operation status at construction sites",
+          "para3": "Direct connection to fire prevention and fighting forces",
+          "para4": "Digital data processing, updating, and statistics for fire prevention and fighting information (names, addresses, phone numbers, at facilities...)"
+      }
+  },
+  "footer": {
+      "company": {
+          "tittle": "Company"
+      },
+      "contact": {
+          "tittle": "Contact Info",
+          "address": "Address: 52 Le Dai Hanh, Q. Hai Ba Trung, Ha Noi, Viet Nam",
+          "email": "Email: kinhdoanh@gsafe.com.vn",
+          "hotline": "Hotline: 024 7108 8814",
+          "hotline1": "Hotline sale: 1900 232 314"
+      },
+      "partner": {
+          "tittle": "Partner",
+          "partner1": "Construction Joint Stock Company",
+          "partner2": "Department of Fire Prevention, Fighting and Rescue",
+          "partner3": "Tech Solutions",
+          "partner4": "Safety Insurance",
+          "partner5": "VN Smart City"
+      },  
+      "policy": "Privacy Policy",
+      "copyright": "Copyright © {{year}} GSafe. All rights reserved."
+  }
+}

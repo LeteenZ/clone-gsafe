@@ -1,0 +1,79 @@
+{
+    "fm1": {
+        "tenToChuc": "abc",
+        "maSoThue": "1111111111",
+        "diaChi": "xyz",
+        "nguoiDaiDien": "a",
+        "email": "abcxyz@gmail.com",
+        "soDienThoai": "0999999999",
+        "linhVucNganhNghiep": "none"
+    },
+    "fm2": {
+        "site1": {
+            "tenCoSo": "1",
+            "soDienThoai": "0999999991",
+            "ngayLapDat": "2025-06-01T17:00:00.000Z",
+            "tinhThanhPho": 6,
+            "huyen": 62,
+            "xaPhuongThiTran": 1942,
+            "duongPho": "1",
+            "diaChiChiTiet": "1",
+            "soThietBi": "1"
+        },
+        "site2": {
+            "tenCoSo": "2",
+            "soDienThoai": "0999999992",
+            "ngayLapDat": "2025-06-01T17:00:00.000Z",
+            "tinhThanhPho": 2,
+            "huyen": 27,
+            "xaPhuongThiTran": 775,
+            "duongPho": "2",
+            "diaChiChiTiet": "2",
+            "soThietBi": "2"
+        }
+    },
+    "fm3": {
+        "site1": {
+            "mainOption": "optionD",
+            "priceOption": "7.200 VND / 24 tháng"
+        },
+        "site2": {
+            "mainOption": "optionB",
+            "priceOption": "18.000 VND / 36 tháng"
+        }
+    },
+    "fm4": {
+        "site1": {
+            "mainOption": "optionD",
+            "priceOption": "7.200 VND / 24 tháng",
+            "users": [
+                {
+                    "name": "1",
+                    "phone": "0999999999"
+                },
+                {
+                    "name": "2",
+                    "phone": "0999999992"
+                }
+            ]
+        },
+        "site2": {
+            "mainOption": "optionB",
+            "priceOption": "18.000 VND / 36 tháng",
+            "users": [
+                {
+                    "name": "3",
+                    "phone": "0999999991"
+                },
+                {
+                    "name": "4",
+                    "phone": "0999999995"
+                },
+                {
+                    "name": "5",
+                    "phone": "0999999997"
+                }
+            ]
+        }
+    }
+}

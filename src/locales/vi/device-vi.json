@@ -1,0 +1,10 @@
+{
+    "devices": {
+        "tittle": "THIẾT BỊ",
+        "details": {
+            "tittle": "GSafe (G6)",
+            "para": "Thiết bị truyền tin báo sự cố G6 (thiết bị G6) là thiết bị truyền thông tin báo cháy từ hiện trường tới trung tâm nhận cảnh báo trong hệ thống báo cháy. Thiết bị G6 được tích hợp với tủ Báo cháy trung tâm (BCTT) để thu thập và quản lý thông tin về hệ thống báo cháy tại cơ sở. Thiết bị G6 có thể truyền tin khi có sự cố cháy, báo trạng thái lỗi của tủ trung tâm, báo cháy từ nút bấm khẩn cấp và cảnh báo khi có sự cố từ thiết bị.Khi có tín hiệu cảnh báo cháy từ đầu báo cháy đến tủ BCTT, Thiết bị G6 sẽ tiếp nhận thông tin đó và gửi lên hệ thống giám sát cảnh báo cháy. Hệ thống sẽ gửi tin nhắn SMS và gọi điện đồng thời tới các số điện thoại đã đăng ký. Thông tin về sự cố cảnh báo như: loại sự cố, thời gian, địa điểm,… đều có trên phần mềm giám sát cảnh báo cháy. Sản phẩm này tuân thủ, đáp ứng các yêu cầu của QCVN 117:2020/BTTTT, QCVN 86:2019/BTTTT trong điều kiện đo kiểm bình thường và điều kiện đo kiểm khắc nghiệt. Thiết bị này phù hợp với hầu hết các loại tủ báo cháy trung tâm.",
+            "btn": "Đăng ký lắp đặt"
+        }
+    }
+}

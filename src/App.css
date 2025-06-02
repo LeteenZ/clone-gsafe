@@ -1,0 +1,23 @@
+@import "tailwindcss";
+.ant-tabs-nav-operations {
+  display: none;
+}
+.ant-steps-item-finish
+  > .ant-steps-item-container
+  > .ant-steps-item-tail::after {
+  background-color: #0267ab !important;
+}
+
+.ant-steps-item-process .ant-steps-icon-dot {
+  background-color: #0267ab !important;
+}
+.ant-steps-item-finish .ant-steps-icon-dot {
+  background-color: #0267ab !important;
+}
+.ant-form-item-has-success input {
+  background-color: #e6f7ff;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #0267ab;
+}

@@ -1,0 +1,10 @@
+{
+    "devices": {
+        "tittle": "DEVICE",
+        "details": {
+            "tittle": "GSafe (G6)",
+            "para": "G6 Incident Notification Transmission Device (G6 Device) is a communication device that transmits fire alarm information from the incident site to the central monitoring center within a fire alarm system. The G6 device is integrated with the Fire Alarm Control Panel (FACP) to collect and manage information related to the fire alarm system at the facility. The G6 device can transmit notifications in the event of a fire, report fault statuses of the control panel, emergency alarm activations, and warnings of any malfunction from connected devices. When a fire alarm signal is received from a fire detector and sent to the FACP, the G6 device receives this information and forwards it to the fire alarm monitoring system. The system will simultaneously send SMS messages and make phone calls to the pre-registered phone numbers. Incident information such as the type of incident, time, location, etc., is fully displayed on the fire alarm monitoring software. This product complies with and meets the requirements of QCVN 117:2020/BTTTT and QCVN 86:2019/BTTTT under both normal and harsh test conditions. It is compatible with most types of fire alarm control panels.",
+            "btn": "Register for installation"
+        }
+    }
+}

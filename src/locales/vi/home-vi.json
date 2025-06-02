@@ -1,0 +1,177 @@
+{
+    "navigation": {
+        "letter": "THƯ NGỎ",
+        "price": "BẢNG GIÁ",
+        "law": "PHÁP LÝ",
+        "guide": "HDSD",
+        "consult": "Tư vấn",
+        "hotline": "1900232314 nhánh số 1"
+    },
+    "banner": {
+        "tittle": "HỆ THỐNG TRUYỀN TIN BÁO SỰ CỐ GSAFE",
+        "para": "Ứng dụng công nghệ AI & IoT tiên tiến, đảm bảo an toàn vận hành cho doanh nghiệp của bạn",
+        "btn": "Đăng ký lắp đặt"
+    },
+    "device_price": {
+        "tittle": "Bảng giá thiết bị & Dịch vụ",
+        "tittle1": "Lựa chọn gói dịch vụ phù hợp với nhu cầu của bạn",
+        "device": {
+            "btn": "XEM CHI TIẾT",
+            "tittle": "MODEL G6",
+            "price": "6.000.000 VND",
+            "price1": "Sản Phẩm (chưa bao gồm VAT)",
+            "feature": "Tương thích với hầu hết các tủ báo cháy",
+            "feature1": "Có khả năng giám sát 03 tín hiệu đầu vào (Báo cháy, báo lỗi, nút bấm)",
+            "feature2": "Kết nối truyền tin thông qua 4G và Ethernet",
+            "feature3": "Nhận biết đứt dây tín hiệu nối với tủ báo cháy trung tâm",
+            "feature4": "Giám sát trạng thái thiết bị: nhiệt độ, trạng thái nguồn, pin,...",
+            "feature5": "Kích hoạt các thiết bị ngoại vi khi có cảnh báo cháy (đèn, chuông,...)",
+            "tittle2": "TỪ THIẾT BỊ THỨ 2 TRỞ ĐI",
+            "para": "Giá gói cước ưu đãi (chưa bao gồm VAT): 100.000VND / Tháng / Thiết bị",
+            "para1": "Các thiết bị này sẽ sử dụng chung gói cước như thiết bị đầu tiên (bao gồm tính năng và quyền lợi tương đương)"
+        },
+        "feature": {
+            "tittle": "TÍNH NĂNG CHUNG CỦA TẤT CẢ CÁC GÓI",
+            "feature": "Tự động truyền tin báo cháy về Trung tâm chỉ huy của lực lượng Cảnh sát PCCC và CNCH",
+            "feature1": "Giám sát trực tuyến tình trạng hoạt động của thiết bị",
+            "feature2": "Sim 4G",
+            "feature3": "Trung tâm dịch vụ hỗ trợ 24/7"
+        },
+        "price": {
+            "device1": {
+                "tittle": "GSafe G300",
+                "price": "300.000 VND",
+                "price1": "tháng",
+                "feature": "1 lần bảo trì thiết bị/năm",
+                "feature1": "2 tài khoản truy cập ứng dụng trên điện thoại",
+                "feature2": "2 số điện thoại nhận tin nhắn cảnh báo cháy"
+            },
+            "device2": {
+                "tittle": "GSafe G400",
+                "price": "400.000 VND",
+                "price1": "tháng",
+                "feature": "1 lần bảo trì thiết bị/năm",
+                "feature1": "5 tài khoản truy cập ứng dụng trên điện thoại",
+                "feature2": "5 số điện thoại nhận tin nhắn cảnh báo cháy"
+            },
+            "device3": {
+                "tittle": "GSafe G500",
+                "price": "500.000 VND",
+                "price1": "tháng",
+                "feature": "2 lần bảo trì thiết bị/năm",
+                "feature1": "10 tài khoản truy cập ứng dụng trên điện thoại",
+                "feature2": "10 số điện thoại nhận tin nhắn cảnh báo cháy"
+            },
+            "device4": {
+                "tittle": "GSafe An Sinh",
+                "price": "200.000 VND",
+                "price1": "tháng",
+                "feature": "1 lần bảo trì thiết bị/năm",
+                "feature1": "5 tài khoản truy cập ứng dụng trên điện thoại",
+                "feature2": "5 số điện thoại nhận tin nhắn cảnh báo cháy"
+            },
+            "btn": "ĐĂNG KÝ",
+            "note": "(Chưa bao gồm VAT)",
+            "note1": "Ghi chú",
+            "note2": ": Gói cước GSafe An Sinh chỉ dành cho các công trình là cơ sở giáo dục, y tế công lập."
+        },
+        "preference": {
+            "tittle": "Ưu đãi áp dụng cho khách hàng mới hoặc gia hạn gói cước GSAFE trong năm 2025 sẽ được tặng thêm thời gian sử dụng gói tuỳ theo chu kỳ đóng cước như sau:",
+            "header": "Chu kỳ đóng cước",
+            "header1": "Ưu đãi tặng thêm",
+            "para": "12 tháng",
+            "para1": "24 tháng",
+            "para11": "36 tháng",
+            "para2": "1 tháng",
+            "para22": "3 tháng",
+            "para222": "5 tháng"
+        }
+    },
+    "recognize": {
+        "tittle": "Đã và đang được lựa chọn bởi",
+        "company1": "Công ty CP Xây dựng",
+        "company2": "Cục PCCC & CNCH",
+        "company3": "Tech Solutions",
+        "company4": "Bảo hiểm an toàn",
+        "company5": "VN Smart City",
+        "comment": "GSafe đã giúp chúng tôi nâng cao tiêu chuẩn an toàn PCCC tại tất cả các dự án bất động sản. Hệ thống thông minh và đáng tin cậy.",
+        "customer": "Đào Thị Huệ",
+        "customer1": "Nguyễn Văn A",
+        "customer11": "Giám đốc kỹ thuật, Công ty XYZ"
+    },
+    "details": {
+        "tittle": "Thiết bị báo cáo sự cố",
+        "tittle1": "GSafe cung cấp giải pháp báo cháy thông minh kết nối trực tiếp với lực lượng cảnh sát PCCC, giúp phát hiện sớm và xửlý kịp thời các sự cố cháy nổ, bảo vệ tài sản và tỉnh mạng",
+        "feature": {
+            "tittle": "Kết nối 4G",
+            "para": "Sử dụng mạng 4G ổn định để truyền tin hiệu báo cháy ngay cả khi mất điện hoặc đường mạng ethernet bị gián đoạn"
+        },
+        "feature1": {
+            "tittle": "Tự động báo cháy",
+            "para": "Tự động gửi báo cáo sự cố đến trung tâm chỉ huy của lực lượng cảnh sát PCCC ngay khi phát hiện"
+        },
+        "feature2": {
+            "tittle": "Ứng dụng di động",
+            "para": "Theo dõi và quản lý thiết bị từ xa qua ứng dụng di động thông minh, nhận thông báo khi có sự cố."
+        },
+        "feature3": {
+            "tittle": "Pin dự phòng",
+            "para": "Tích hợp pin dự phòng đảm bảo hoạt động liên tục ngay cả khi mất điện lưới."
+        },
+        "tittle2": "CÁCH THỨC HOẠT ĐỘNG",
+        "feature4": {
+            "tittle": "Phát hiện sự cố",
+            "para": "Thiết bị truyền tin tiếp nhận tín hiệu cảnh báo từ tủ báo cháy tại cơ sở, công trình."
+        },
+        "feature5": {
+            "tittle": "Truyền tín hiệu",
+            "para": "Hệ thống GSafe tự động truyền tín hiệu đến trung tâm giám sát của GEIC và trung tâm thông tin chỉ huy của lực lượng cảnh sát PCCC&CNCH."
+        },
+        "feature6": {
+            "tittle": "Cảnh báo",
+            "para": "Cảnh báo tự động đến chủ cơ sở hoặc người phụ trách bằng Autocall, Appmobile."
+        },
+        "feature7": {
+            "tittle": "Xử lý nghiệp vụ",
+            "para": "Hỗ trợ lực lượng cảnh sát PCCC xử lý nghiệp vụ chính xác, kịp thời."
+        },
+        "parameter": {
+            "tittle": "THÔNG SỐ KỸ THUẬT",
+            "para": "Kết nối: 4G LTE, Ethernet",
+            "para1": "Nguồn điện: 24VDC",
+            "para2": "Pin dự phòng: Lithium 3, 7V - 5000mAh",
+            "para3": "Kích thước: 100mm x 105mm x 30mm",
+            "para4": "Kênh tín hiệu vào/ra: 3 kênh đầu vào (báo cháy, báo lỗi, nút bấm)/1 kênh đầu ra(dùng cho chuông hoặc đèn)"
+        },
+        "benefit": {
+            "tittle": "LỢI ÍCH",
+            "para": "Cảnh báo sớm khi có tín hiệu cháy xảy ra (bằng Autocall, Mobile App)",
+            "para1": "Hỗ trợ lọc báo cháy giả (rút ngắn thời gian xác minh cháy)",
+            "para2": "Giám sát trực tuyến 24/7 tình trạng hoạt động của thiết bị truyền tin tại cơ sở công trình",
+            "para3": "Kết nối trực tiếp đến lực lượng PCCC&CNCH",
+            "para4": "Số hoá dữ liệu, cập nhật, thống kê thông tin PCCC (tên, địa chỉ, số điện thoại, tại cơ sở...)"
+        }
+    },
+    "footer": {
+        "company": {
+            "tittle": "Công ty"
+        },
+        "contact": {
+            "tittle": "Thông tin liên hệ",
+            "address": "Địa chỉ: 52 Lê Đại Hành, Q. Hai Bà Trưng, Hà Nội, Việt Nam",
+            "email": "Email: kinhdoanh@gsafe.com.vn",
+            "hotline": "Hotline: 024 7108 8814",
+            "hotline1": "Hotline bán hàng: 1900 232 314"
+        },
+        "partner": {
+            "tittle": "Đối tác",
+            "partner1": "Công ty CP Xây dựng",
+            "partner2": "Cục PCCC & CNCH",
+            "partner3": "Tech Solutions",
+            "partner4": "Bảo hiểm An Toàn",
+            "partner5": "VN Smart City"
+        },  
+        "policy": "Chính sách bảo mật",
+        "copyright": "Copyright © {{year}} GSafe. All rights reserved."
+    }
+}
