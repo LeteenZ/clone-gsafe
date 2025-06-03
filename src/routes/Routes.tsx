@@ -21,20 +21,11 @@ export const router = createBrowserRouter([
         path: "purchase",
         element: <Purchase />,
       },
-    //   {
-    //     path: "catalog",
-    //     element: <Catalog />,
-    //     children: [
-    //       {
-    //         path: ":id",
-    //         element: <Catalog />,
-    //       },
-    //     ],
-    //   },
       {
         path: "*",
         element: <Navigate to="/" />,
       },
-    ],
+    ],  
   },
-]);
+]
+);

@@ -7,7 +7,6 @@ import { useState } from 'react';
 import { useVietnamLocation } from '../../../../hooks/useVietnamLocation';
 import ScrollToTop from '../../../../hooks/ScrollToTop';
 import type { District, Ward } from '../../../../hooks/useVietnamLocation';
-import { type } from './../../../../types/SlickSlide';
 
 const SiteInformation = () => {
     const { t } = useTranslation('purchase');
@@ -80,7 +79,7 @@ const SiteInformation = () => {
                 ...formData,
                 ...formattedData
               });
-              setCurrentStep((currentStep || 0) + 1);
+              await setCurrentStep((currentStep || 0) + 1);
         } catch (error) {
             console.error('Error in handleFinish:', error);
         }

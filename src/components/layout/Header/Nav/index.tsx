@@ -4,7 +4,7 @@ import { linkData } from "../../../../data/Link";
 import SidebarDrawer from "../../../components/Drawer";
 import logoGEIC from "../../../../../public/assets/Logo GEIC blue.png";
 import vectorStroke from "../../../../../public/assets/Vector (Stroke).png";
-import arrow from "../../../../../public/assets/arrow_drop down_icon.png";
+import arrowDrop from "../../../../../public/assets/arrow_drop down_icon.png";
 
 const Nav = () => {
   const { t, i18n } = useTranslation();
@@ -158,7 +158,7 @@ const Nav = () => {
                             </svg> 
                         )}
                         <img
-                            src={arrow}
+                            src={arrowDrop}
                             alt="arrow"
                             className="cursor-pointer object-cover"
                         />
