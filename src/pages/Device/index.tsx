@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useInView } from "../../hooks/useInView";
+import deviceImg from "../../../public/assets/Gsafe G6.png";
 
 const Device = () => {
     window.scrollTo(0, 0);
@@ -23,7 +24,7 @@ const Device = () => {
                     <div className="mx-auto flex max-w-6xl flex-col items-center gap-10 px-4 py-12 md:flex-row">
                         <div className="order-1 flex flex-1 justify-center md:order-2">
                             <img 
-                                src="/assets/Gsafe G6.png" 
+                                src={deviceImg} 
                                 alt="img" 
                                 className="object-contain"
                                 width={494}

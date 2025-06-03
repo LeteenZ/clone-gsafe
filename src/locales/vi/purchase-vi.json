@@ -142,7 +142,14 @@
             },
             "message": {
                 "success1": "Tạo đơn hàng thành công",
-                "success2": "Vui lòng kiểm tra email và hoàn tất thanh toán"
+                "success2": "Vui lòng kiểm tra email và hoàn tất thanh toán",
+                "success3": "Tạo đơn hàng thành công",
+                "notification1": "Notification",
+                "notification2": "Trở về trang chủ"
+            },
+            "transfer": {
+                "tittle": "Chuyển khoản qua mã QR",
+                "tittle1": "Vui lòng quét mã QR để thanh toán đơn hàng"
             }
         }        
     },
@@ -200,6 +207,8 @@
         "cn5": "Thêm số điện thoại",
         "cn6": "Thanh toán",
         "cn7": "Hoàn thành",
-        "cn8": "Mã QR đã tạo"
+        "cn8": "Mã QR đã tạo",
+        "cn9": "Lưu",
+        "cn10": "Hủy"
     }
 }

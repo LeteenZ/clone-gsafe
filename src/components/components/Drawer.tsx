@@ -2,6 +2,7 @@ import React from "react";
 import type { SidebarDrawerProps } from "../../types/SidebarDrawer";
 import { useTranslation } from "react-i18next";
 import { linkData } from "../../data/Link";
+import vectorStroke from '../../../public/assets/Vector (Stroke).png';
 
 const SidebarDrawer: React.FC<SidebarDrawerProps> = ({ isOpen, toggleDrawer }) => {
     const { t } = useTranslation();
@@ -47,7 +48,7 @@ const SidebarDrawer: React.FC<SidebarDrawerProps> = ({ isOpen, toggleDrawer }) =
                     <div className="flex gap-3 items-center">
                         <div className="flex justify-center content-center rounded-2xl bg-[#0266ad] w-[50px] h-[50px]">
                             <img 
-                                src="assets/Vector (Stroke).png"
+                                src={vectorStroke}
                                 className="object-none" 
                                 alt="img" 
                             />

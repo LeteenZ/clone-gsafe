@@ -2,7 +2,8 @@ import { useTranslation } from "react-i18next";
 import type { Sponsor } from "../../../types/SlickSlide";
 import { slickSlideData } from "../../../data/SlickSlide";
 import { Slider } from "../../../components/components/Slider";
-import CompanyCard from "../../../components/components/CompanyCard";
+import quotesImage from "../../../../public/assets/quotes.png";
+import mockUserImage from "../../../../public/assets/mockUser.png";
 
 // const Recognize = () => {
 //     const { t } = useTranslation();
@@ -97,7 +98,7 @@ const Recognize = () => {
                     <div className="relative rounded-xl border bg-white p-6 pt-0 shadow border-gray-200">
                         <div className="flex items-center justify-center mb-10">
                             <img 
-                                src="/assets/quotes.png" 
+                                src={quotesImage} 
                                 alt="quote" 
                                 className=" text-[#73b5e7] transform hidden md:block absolute -left-4 -top-5" 
                             />
@@ -108,7 +109,7 @@ const Recognize = () => {
                         <div className="flex items-center gap-4">
                             <div className="size-12 aspect-square flex items-center justify-center rounded-full bg-sky-100 overflow-hidden">
                                 <img 
-                                    src="/assets/mockUser.png"
+                                    src={mockUserImage}
                                     alt="img" 
                                     loading="lazy"
                                     decoding="async"

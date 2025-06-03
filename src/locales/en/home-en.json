@@ -63,7 +63,7 @@
               "feature2": "10 phone number to receive fire alert messages"
           },
           "device4": {
-              "tittle": "GSafe An Sinh",
+              "tittle": "GSafe Security",
               "price": "200.000 VND",
               "price1": "month",
               "feature": "1 device maintenance times/year",
@@ -73,7 +73,7 @@
           "btn": "SIGN UP",
           "note": "(Excluding VAT)",
           "note1": "Note",
-          "note2": ": The GSafe An Sinh package is only for educational and public health facilities."
+          "note2": ": The GSafe Security Package     is only for educational and public health facilities."
       },
       "preference": {
           "tittle": "The offer applies to new customers or those renewing the GSAFE package in 2025, who will receive additional usage time depending on the payment cycle as follows:",

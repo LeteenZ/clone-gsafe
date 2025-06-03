@@ -2,9 +2,14 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { linkData } from "../../../../data/Link";
 import SidebarDrawer from "../../../components/Drawer";
+import logoGEIC from "../../../../../public/assets/Logo GEIC blue.png";
+import vectorStroke from "../../../../../public/assets/Vector (Stroke).png";
+import arrow from "../../../../../public/assets/arrow_drop down_icon.png";
+
 const Nav = () => {
   const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const [ isClicked, setisClicked ] = useState(false);
 
   const toggleDrawer = () => setIsOpen(!isOpen);
 
@@ -24,7 +29,7 @@ const Nav = () => {
 
             <a href="/lol" className="flex items-center justify-center cursor-pointer">
                 <img 
-                    src="/assets/Logo GEIC blue.png" 
+                    src={logoGEIC} 
                     className="max-h-7 w-fit md:max-h-10 object-contain"
                     width={85}
                     height={30}
@@ -64,7 +69,7 @@ const Nav = () => {
                 <div className="hidden xl:flex gap-3 items-center">
                     <div className="flex justify-center content-center rounded-2xl bg-[#0266ad] w-[50px] h-[50px]">
                         <img 
-                            src="assets/Vector (Stroke).png"
+                            src={vectorStroke}
                             className="object-none" 
                             alt="img" 
                         />
@@ -96,7 +101,10 @@ const Nav = () => {
                     <SidebarDrawer isOpen={isOpen} toggleDrawer={toggleDrawer} />
                 </div>
 
-                <div className="relative inline-flex items-center space-x-2 group order-1">
+                <div 
+                    className="relative inline-flex items-center space-x-2 group order-1"
+                    onClick={() => setisClicked(!isClicked)}
+                >
                     <div className="flex items-end gap-1">
                         {i18n.language == 'vi' ? (
                             <svg 
@@ -150,14 +158,22 @@ const Nav = () => {
                             </svg> 
                         )}
                         <img
-                            src="/assets/arrow_drop down_icon.png"
+                            src={arrow}
                             alt="arrow"
                             className="cursor-pointer object-cover"
                         />
                     </div>
 
-                    <div className="absolute top-10 left-0 hidden group-hover:flex flex-col bg-white border border-gray-300 rounded-lg shadow-md z-50">
-                        <button className="px-4 py-2 hover:bg-gray-100" onClick={() => changeLanguage("vi")}>
+                    <div 
+                        className={`
+                            absolute top-10 left-0 md:group-hover:flex flex-col bg-white border border-gray-300 rounded-lg shadow-md z-50
+                            ${isClicked ? 'flex' : 'hidden'} md:hidden
+                        `}
+                    >
+                        <button 
+                            className="px-4 py-2 hover:bg-gray-100" 
+                            onClick={() => changeLanguage("vi")}
+                        >
                             <div className="flex items-center">
                                 <svg 
                                     className="w-5 h-5 cursor-pointer"
@@ -180,7 +196,10 @@ const Nav = () => {
                                 <p className="ml-2">VN</p>
                             </div>
                         </button>
-                        <button className="px-4 py-2 hover:bg-gray-100 text-left" onClick={() => changeLanguage("en")}>
+                        <button 
+                            className="px-4 py-2 hover:bg-gray-100 text-left" 
+                            onClick={() => changeLanguage("en")}
+                        >
                             <div className="flex items-center">
                                 <svg 
                                     className="w-5 h-5 cursor-pointer" 

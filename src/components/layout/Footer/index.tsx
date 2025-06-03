@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { linkData } from '../../../data/Link';
+import logoGEIC from '../../../../public/assets/Logo GEIC white.png';
+import groupLogo from '../../../../public/assets/Group 5.png';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -52,7 +54,7 @@ const Footer = () => {
             <div className="w-[40%]">
               <a href="/lol" className="flex items-center justify-center cursor-pointer">
                 <img
-                  src="/assets/Logo GEIC white.png"
+                  src={logoGEIC}
                   alt="Logo GEIC"
                   className="w-full h-auto object-contain"
                   loading="lazy"
@@ -62,7 +64,7 @@ const Footer = () => {
             </div>
             <div className="w-[40%]">
               <img
-                src="/assets/Group 5.png"
+                src={groupLogo}
                 alt="Group Logo"
                 className="w-full h-auto object-contain"
                 loading="lazy"

@@ -6,16 +6,17 @@ import './index.css';
 import { useState } from 'react';
 import { useVietnamLocation } from '../../../../hooks/useVietnamLocation';
 import ScrollToTop from '../../../../hooks/ScrollToTop';
+import type { District, Ward } from '../../../../hooks/useVietnamLocation';
 
 const SiteInformation = () => {
     const { t } = useTranslation('purchase');
     const [form] = Form.useForm();
-    const { formData, updateFormData, setCurrentStep } = useFormContext();
+    const { currentStep, formData, updateFormData, setCurrentStep } = useFormContext();
     const [removingKey, setRemovingKey] = useState<number | null>(null);
 
     const { provinces, error } = useVietnamLocation();
-    const [districts, setDistricts] = useState([]);
-    const [wards, setWards] = useState([]);
+    const [districts, setDistricts] = useState<District[]>([]);
+    const [wards, setWards] = useState<Ward[]>([]);
 
     const handleProvinceChange = (code: string, fieldName: string) => {
         const province = provinces.find(p => p.code === code);
@@ -78,14 +79,14 @@ const SiteInformation = () => {
                 ...formData,
                 ...formattedData
               });
-              setCurrentStep(2);
+              setCurrentStep((currentStep || 0) + 1);
         } catch (error) {
             console.error('Error in handleFinish:', error);
         }
     };
 
     const prev = () => {
-        setCurrentStep((prevStep) => prevStep - 1);
+        setCurrentStep((currentStep || 1) - 1);
     };
 
     return (

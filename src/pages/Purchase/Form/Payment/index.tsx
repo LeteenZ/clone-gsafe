@@ -1,5 +1,5 @@
-import { Checkbox, Form, message, notification, Radio, Spin } from "antd";
-import { LoadingOutlined } from '@ant-design/icons';
+import { Checkbox, notification, Form, Radio, Spin } from "antd";
+import { ExclamationCircleFilled, LoadingOutlined } from '@ant-design/icons';
 import { useFormContext } from "../../Form Context";
 import { useTranslation } from "react-i18next";
 import ScrollToTop from "../../../../hooks/ScrollToTop";
@@ -8,11 +8,20 @@ import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
 import { MONEY } from "../../../../constants/payment";
 import { mainOptions } from "../../../../data/Services";
+import { Modal } from "antd";
+import CountdownTimer from "../../../../components/components/CounterTime";
+
+const { confirm } = Modal;
+
+interface SiteData {
+    tenCoSo: string;
+    soThietBi: number;
+}
 
 const OrderPayment = () => {
     const { t } = useTranslation('purchase');
     const [form] = Form.useForm();
-    const { formData, updateFormData, setCurrentStep } = useFormContext();
+    const {currentStep, formData, setCurrentStep } = useFormContext();
     const [isProcessing, setIsProcessing] = useState(false);
     const [isComplete, setIsComplete] = useState(false);
     const [paymentMethod, setPaymentMethod] = useState();
@@ -62,52 +71,55 @@ const OrderPayment = () => {
                 linhVucNganhNghe: formData.fm1.linhVucNganhNghe || 'none'
             });
             if (formData?.fm2 && formData?.fm3) {
-                const items = Object.entries(formData.fm2).map(([siteKey, siteData]) => {
+                const items = Object.entries<SiteData>(formData.fm2 as Record<string, SiteData>).map(([siteKey, siteData]) => {
                     const packageInfo = formData.fm3[siteKey as keyof typeof formData.fm3];
                     return {
                         siteName: siteData.tenCoSo,
-                        deviceCount: siteData.soThietBi,
+                        deviceCount: siteData.soThietBi.toString(),
                         packageName: mainOptions(t).find(option => option.key === packageInfo.mainOption)?.label || '',
-                        price: packageInfo.priceOption
+                        price: String(packageInfo.priceOption)
                     };
                 });
                 setOrderItems(items);
             }
         }
-    }, [formData, form]);
+    }, [formData, form, t]);
 
     const prev = () => {
-        setCurrentStep((prevStep) => prevStep - 1);
+        setCurrentStep((currentStep || 1) - 1);
     };
     
     const handleFinish = () => {
-        navigate('/');
+        confirm({
+            title: t("form.form5.message.notification1"),
+            icon: <ExclamationCircleFilled />,
+            content: t("form.form5.message.notification2"),
+            centered: true,
+            okButtonProps: {
+                style: { backgroundColor: '#0267ab' },
+            },
+            onOk() {
+              navigate('/');
+            },
+            onCancel() {
+            },
+          });
     };
     
     const handlePayment = async () => {
         if(isAgreed2){
             try {
-                const values = await form.validateFields();
+                await form.validateFields();
+                
                 setIsProcessing(true);
-                const paymentData = {
-                    ...values,
-                    orderItems,
-                    totalAmount,
-                    vatAmount,
-                    grandTotal,
-                    paymentMethod,
-                    paymentDate: new Date().toISOString()
-                };
-        
                 if (paymentMethod === 'tratruoc') {
                     setTimeout(() => {
                         setIsProcessing(false);
                         notification.success({
                             message: (
-                                <div className="relative pr-8">
-                                    <p className="text-lg font-semibold text-left">{t("form.form5.message.success1")}</p>
-                                    <p className="text-left">{t("form.form5.message.success2")}</p>
-                                </div>
+                                <>
+                                    <p className="text-left">{t("form.form5.message.success3")}</p>
+                                </>
                             ),
                             className: 'custom-message',
                             icon: (
@@ -129,9 +141,7 @@ const OrderPayment = () => {
                             ),
                         });
                         setIsAgreed2(false);
-                        setTimeout(() => {
-                            navigate('/');
-                        }, 5000);
+                        setIsComplete(true);
                     }, 2000);
                 } else {
                     setTimeout(() => {
@@ -144,7 +154,7 @@ const OrderPayment = () => {
                                 </div>
                             ),
                             className: 'custom-message',
-                            duration: 5,
+                            duration: 4.5,
                             icon: (
                             <div className="mt-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center md:mt-0.5 sm:mt-0.5">
                                 <svg
@@ -375,8 +385,7 @@ const OrderPayment = () => {
                                 </Radio.Group>
                             </Form.Item>
                         </div>
-                        <Checkbox 
-                            checked={isAgreed2}
+                        <Checkbox
                             onChange={(e) => setIsAgreed2(e.target.checked)}
                             className="flex md:col-span-2"
                         >
@@ -408,6 +417,9 @@ const OrderPayment = () => {
                                     )}
                                 </div>
                             </button>
+                            {isComplete ? (
+                                <CountdownTimer total={grandTotal} />
+                            ) : null}
                         </div>
                     </div>
                 </Card>
@@ -416,7 +428,6 @@ const OrderPayment = () => {
                 <button
                     className="flex w-fit min-w-28 items-center justify-center gap-2 whitespace-nowrap rounded-2xl px-6 shadow-[0px_1px_4px_rgba(0,0,0,0.3)] bg-white text-[#475569] hover:text-white hover:bg-[#0266ad] h-10 cursor-pointer"
                     onClick={prev}
-                    disabled={isComplete}
                 >
                     <div className="group flex items-center gap-2 text-sm font-medium md:text-base">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -432,7 +443,7 @@ const OrderPayment = () => {
                 <button
                     className="flex w-fit min-w-28 items-center justify-center gap-2 whitespace-nowrap rounded-2xl px-6 shadow-[0px_1px_4px_rgba(0,0,0,0.3)] bg-white text-slate-600 hover:text-white hover:bg-[#0266ad] h-10 cursor-pointer"
                     onClick={handleFinish}
-                    
+                    disabled={!isComplete}
                 >
                     <div className="group flex items-center gap-2 text-sm font-medium md:text-base">
                         <p>{t("controls.cn7")}</p>

@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
-
+import bannerImg from '../../../../public/assets/bg-banner.jpg';
+import dvBanner from '../../../../public/assets/dv-banner.png';
 
 const Banner = () => {
     const { t } = useTranslation();
@@ -7,7 +8,7 @@ const Banner = () => {
         <>
             <div className="relative w-full pt-16">
                 <img 
-                    src="/assets/bg-banner.jpg" 
+                    src={bannerImg} 
                     alt="banner" 
                     width={1920}
                     height={1200}
@@ -17,7 +18,7 @@ const Banner = () => {
                 <div className="absolute left-0 top-0 z-10 flex size-full items-center justify-center px-6 md:px-16">
                     <div className="flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-8 md:flex-row">
                         <div className="text-center md:w-1/2 md:text-left">
-                            <h1 className="font-extrabold text-3xl mt-20 text-black drop-shadow-xl md:mt-1 lg:text-5xl leading-15">{t("banner.tittle")}</h1>
+                            <h1 className="font-extrabold text-2xl mt-20 text-black drop-shadow-xl md:mt-1 lg:text-5xl md:leading-15">{t("banner.tittle")}</h1>
                             <p className="my-2 text-sm font-medium text-[#252627] md:text-lg md:my-6 md:flex-row md:justify-start">{t("banner.para")}</p>
                             <div className="my-3 flex items-center justify-center gap-3 md:my-6 md:flex-row md:justify-start">
                                 <a href="/purchase">
@@ -56,7 +57,7 @@ const Banner = () => {
                             height="400" 
                             decoding="async" 
                             className="h-auto w-full object-contain"
-                            src="/assets/dv-banner.png"
+                            src={dvBanner}
                         />
                         </div>
                     </div>

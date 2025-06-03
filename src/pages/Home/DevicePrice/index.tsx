@@ -5,6 +5,9 @@ import Licomponent from "../../../components/components/Licomponent";
 import Li2Component from "../../../components/components/Li2Component";
 import DevicePriceCard from "../../../components/components/DevicePriceCard";
 import { useInView } from "../../../hooks/useInView";
+import deviceImg from "../../../../public/assets/Gsafe G6.png";
+
+
 const DevicePrice = () => {
     const { t } = useTranslation();
     const { ref, inView } = useInView();
@@ -29,10 +32,10 @@ const DevicePrice = () => {
                     >
                         <div className="overflow-hidden rounded-lg bg-white shadow-[0px_4px_4px_rgba(0,0,0,0.3)]">
                             <div className="flex flex-col md:flex-row">
-                                <div className="flex items-center justify-center bg-sky-50 p-6 pb-0 md:w-5/12">
+                                <div className="flex items-center justify-center bg-sky-50 p-6 md:pb-0 md:w-5/12">
                                     <div className="flex gap-4 flex-col items-center">
                                         <img 
-                                            src="/assets/Gsafe G6.png" 
+                                            src={deviceImg} 
                                             alt="img" 
                                             className="object-contain"
                                             width={494}
@@ -45,7 +48,7 @@ const DevicePrice = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="p-6 pb-0 md:w-7/12">
+                                <div className="p-6 md:pb-0 md:w-7/12">
                                     <div className="flex flex-col justify-center h-full">
                                         <h3 className="mb-5 text-center text-2xl font-bold text-[#0267ab] sm:text-3xl md:text-left xl:text-4xl">
                                             {t("device_price.device.tittle")}
@@ -106,13 +109,13 @@ const DevicePrice = () => {
                         <span>{t("device_price.price.note2")}</span>
                     </div>
                 </div>
-                <div className="m-10 overflow-hidden rounded-lg shadow-[0px_4px_4px_rgba(0,0,0,0.1)]">
+                <div className="m-6 md:m-10 overflow-hidden rounded-lg shadow-[0px_4px_4px_rgba(0,0,0,0.1)]">
                     <div className="rounded-t-lg bg-sky-100 p-5 md:px-28">
-                        <p className="font-bold md:text-xl">{t("device_price.preference.tittle")}</p>
+                        <p className="font-bold md:text-xl text-justify">{t("device_price.preference.tittle")}</p>
                     </div>
                     <div className="flex items-center justify-around border-b border-gray-200 bg-gray-100 px-5 py-3 font-semibold text-gray-600">
-                        <p className="md:text-lg">{t("device_price.preference.header")}</p>
-                        <p className="md:text-lg">{t("device_price.preference.header1")}</p>
+                        <p className="md:text-lg text-center">{t("device_price.preference.header")}</p>
+                        <p className="md:text-lg text-center">{t("device_price.preference.header1")}</p>
                     </div>
                     <div className="flex items-center justify-around border-b border-gray-200 px-5 py-4 last:border-b-0">
                         <p className="font-medium md:text-lg">{t("device_price.preference.para")}</p>

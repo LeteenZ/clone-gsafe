@@ -1,7 +1,7 @@
-import { Form, Radio, message } from 'antd';
+import { Form, Radio } from 'antd';
 import { useFormContext } from '../../Form Context';
 import { useTranslation } from 'react-i18next';
-import { useEffect, useState, useCallback, useMemo } from 'react';
+import { useEffect, useCallback, useMemo } from 'react';
 import { mainOptions, subOptionsDsc, priceOptionsMap } from '../../../../data/Services';
 import ScrollToTop from '../../../../hooks/ScrollToTop';
 
@@ -22,9 +22,8 @@ interface OptionType {
 
 const ServicePackageAndCycle = () => {
   const { t } = useTranslation('purchase');
-  const { formData, updateFormData, setCurrentStep } = useFormContext();
+  const { currentStep, formData, updateFormData, setCurrentStep } = useFormContext();
   const [form] = Form.useForm<FormValues>();
-  const [sites, setSites] = useState<SiteData[]>([]);
 
   const { mainOpts, priceOpts, subOptsDsc } = useMemo(() => ({
     mainOpts: mainOptions(t) as OptionType[],
@@ -35,8 +34,7 @@ const ServicePackageAndCycle = () => {
   useEffect(() => {
     if (formData?.fm2) {
       try {
-        const sitesArray = Object.values(formData.fm2);
-        setSites(sitesArray);
+        const sitesArray = Object.values(formData.fm2) as SiteData[];
         form.setFieldsValue({
           sites: sitesArray.map((_, idx) => ({
             key: `site-${idx}`,
@@ -69,7 +67,7 @@ const ServicePackageAndCycle = () => {
         ...formData,
         ...formattedData
       });
-      setCurrentStep(3);
+      setCurrentStep((currentStep || 0) + 1);
     } catch (error) {
       console.error('Error in handleFinish:', error);
     }
@@ -85,7 +83,7 @@ const ServicePackageAndCycle = () => {
   };
 
   const prev = () => {
-    setCurrentStep((prevStep) => prevStep - 1);
+    setCurrentStep((currentStep || 1) - 1);
   };
 
   const renderMainOptions = useCallback((mainOptionValue: string, name: number) => (

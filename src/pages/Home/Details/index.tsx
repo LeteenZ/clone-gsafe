@@ -3,6 +3,18 @@ import FeatureCard from "../../../components/components/FeatureCard";
 import WorkCard from "../../../components/components/WorkCard";
 import Li2Component from "../../../components/components/Li2Component";
 import { useInView } from "../../../hooks/useInView";
+import fourGImage from "../../../../public/assets/4g.png";
+import shieldImage from "../../../../public/assets/shield.png";
+import phoneImage from "../../../../public/assets/phone.png";
+import batteryImage from "../../../../public/assets/battery.png";
+import deviceImg from "../../../../public/assets/Gsafe G6.png";
+import specificationsImage from "../../../../public/assets/specifications.png";
+import signalImage from "../../../../public/assets/signal.png";
+import notifImage from "../../../../public/assets/notif.png";
+import carImage from "../../../../public/assets/car.png";
+import achiveImage from "../../../../public/assets/achive.png";
+import arrowImage from "../../../../public/assets/arrow.png";
+import fireImage from "../../../../public/assets/fire.png";
 
 const Details = () => {
     const { t } = useTranslation();
@@ -24,22 +36,22 @@ const Details = () => {
                         <div className="md:col-span-4">
                             <div className="grid h-full grid-cols-1 gap-4 sm:grid-cols-2">
                                 <FeatureCard
-                                    imageSrc="/assets/4g.png"
+                                    imageSrc={fourGImage}
                                     title={t("details.feature.tittle")}
                                     description={t("details.feature.para")}
                                 />
                                 <FeatureCard
-                                    imageSrc="/assets/shield.png"
+                                    imageSrc={shieldImage}
                                     title={t("details.feature1.tittle")}
                                     description={t("details.feature1.para")}
                                 />
                                 <FeatureCard
-                                    imageSrc="/assets/phone.png"
+                                    imageSrc={phoneImage}
                                     title={t("details.feature2.tittle")}
                                     description={t("details.feature2.para")}
                                 />
                                 <FeatureCard
-                                    imageSrc="/assets/battery.png"
+                                    imageSrc={batteryImage}
                                     title={t("details.feature3.tittle")}
                                     description={t("details.feature3.para")}
                                 />
@@ -48,7 +60,7 @@ const Details = () => {
                         <div className="flex flex-1 items-center justify-center rounded-lg border border-gray-200 bg-sky-100 px-6 py-4 shadow md:col-span-3">
                             <div className="overflow-hidden">
                                 <img 
-                                    src="/assets/Gsafe G6.png" 
+                                    src={deviceImg} 
                                     alt="img" 
                                     className="object-contain max-w-full max-h-full"
                                     loading="lazy"
@@ -65,12 +77,12 @@ const Details = () => {
                     <div className="flex h-full flex-col items-center justify-center gap-3 xl:h-72 xl:flex-row xl:gap-0">
                         <div className="flex h-full flex-col items-center justify-center xl:h-72 xl:flex-row gap-2 xl:gap-0">
                             <WorkCard
-                                iconSrc="/assets/fire.png"
+                                iconSrc={fireImage}
                                 title={t("details.feature4.tittle")}
                                 description={t("details.feature4.para")}
                             />
                             <img
-                                src="/assets/arrow.png"
+                                src={arrowImage}
                                 alt="img"
                                 loading="lazy"
                                 decoding="async"
@@ -79,12 +91,12 @@ const Details = () => {
                         </div>
                         <div className="flex h-full flex-col items-center justify-center xl:h-72 xl:flex-row gap-2 xl:gap-0">
                             <WorkCard
-                                iconSrc="/assets/signal.png"
+                                iconSrc={signalImage}
                                 title={t("details.feature5.tittle")}
                                 description={t("details.feature5.para")}
                             />
                             <img
-                                src="/assets/arrow.png"
+                                src={arrowImage}
                                 alt="img"
                                 loading="lazy"
                                 decoding="async"
@@ -93,12 +105,12 @@ const Details = () => {
                         </div>
                         <div className="flex h-full flex-col items-center justify-center xl:h-72 xl:flex-row gap-2 xl:gap-0">
                             <WorkCard
-                                iconSrc="/assets/notif.png"
+                                iconSrc={notifImage}
                                 title={t("details.feature6.tittle")}
                                 description={t("details.feature6.para")}
                             />
                             <img
-                                src="/assets/arrow.png"
+                                src={arrowImage}
                                 alt="img"
                                 loading="lazy"
                                 decoding="async"
@@ -106,7 +118,7 @@ const Details = () => {
                             />
                         </div>
                         <WorkCard
-                            iconSrc="/assets/car.png"
+                            iconSrc={carImage}
                             title={t("details.feature7.tittle")}
                             description={t("details.feature7.para")}
                         />
@@ -126,7 +138,7 @@ const Details = () => {
                                 <div className="h-full min-w-[300px] flex-1 rounded-xl bg-white p-6 shadow-[0px_4px_4px_rgba(0,0,0,0.1)]">
                                     <div className="mb-4 flex items-center gap-3">
                                         <img 
-                                            src="/assets/specifications.png" 
+                                            src={specificationsImage} 
                                             alt="img" 
                                             loading="lazy"
                                             decoding="async"
@@ -156,7 +168,7 @@ const Details = () => {
                                 <div className="h-full min-w-[300px] flex-1 rounded-xl bg-white p-6 shadow-[0px_4px_4px_rgba(0,0,0,0.1)]">
                                     <div className="mb-4 flex items-center gap-3">
                                         <img 
-                                            src="/assets/achive.png" 
+                                            src={achiveImage} 
                                             alt="img" 
                                             loading="lazy"
                                             decoding="async"

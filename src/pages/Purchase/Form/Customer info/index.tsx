@@ -6,13 +6,13 @@ import ScrollToTop from '../../../../hooks/ScrollToTop';
 const CustomerInformation = () => {
     const { t } = useTranslation('purchase');
     const [form] = Form.useForm();
-    const { updateFormData, setCurrentStep } = useFormContext();
+    const {currentStep, updateFormData, setCurrentStep } = useFormContext();
 
     const next = async () => {
         try {
             const values = await form.validateFields();
             updateFormData({ fm1: values }); 
-            setCurrentStep(1); 
+            setCurrentStep((currentStep || 0) + 1);
         } catch (error) {
             console.error('Validation Failed:', error);
         }

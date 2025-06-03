@@ -142,7 +142,14 @@
           },
           "message": {
               "success1": "Order created successfully",
-              "success2": "Please check email and complete payment"
+              "success2": "Please check email and complete payment",
+              "success3": "Order created successfully",
+              "notification1": "Notification",
+              "notification2": "Back to home"
+          },
+          "transfer": {
+              "tittle": "Transfer via QR code",
+              "tittle1": "Please scan QR code to pay for the order"
           }
       }        
   },
@@ -201,6 +208,8 @@
       "cn5": "Add phone number",
       "cn6": "Pay",
       "cn7": "Complete",
-      "cn8": "QR code created"
+      "cn8": "QR code created",
+      "cn9": "Save",
+      "cn10": "Cancel"
   }
 }

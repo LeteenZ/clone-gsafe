@@ -18,5 +18,5 @@ export default defineConfig({
       'react-dom': 'react-dom'
     }
   },
-  base: '/clone-gsafe'
+  base: '/',
 })

@@ -8,13 +8,13 @@ export interface Ward {
 export interface District {
   code: string;
   name: string;
-  wards: Ward[];
+  wards?: Ward[];
 }
 
 export interface Province {
   code: string;
   name: string;
-  districts: District[];
+  districts?: District[];
 }
 
 export const useVietnamLocation = () => {

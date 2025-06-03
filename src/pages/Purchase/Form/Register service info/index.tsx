@@ -1,7 +1,7 @@
-import { Card, Form, Input, Radio, message } from 'antd';
+import { Card, Form, Input } from 'antd';
 import { useFormContext } from '../../Form Context';
 import { useTranslation } from 'react-i18next';
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useCallback } from 'react';
 import ScrollToTop from '../../../../hooks/ScrollToTop';
 
 interface User {
@@ -22,15 +22,13 @@ interface FormValues2 {
 
 const ServiceUsageRegistration = () => {
   const { t } = useTranslation('purchase');
-  const { formData, updateFormData, setCurrentStep } = useFormContext();
+  const { currentStep, formData, updateFormData, setCurrentStep } = useFormContext();
   const [form] = Form.useForm<FormValues2>();
-  const [sites, setSites] = useState<SiteData2[]>([]);
 
   useEffect(() => {
     if (formData?.fm3) {
       try {
-        const sitesArray = Object.values(formData.fm3);
-        setSites(sitesArray);
+        const sitesArray = Object.values(formData.fm3) as SiteData2[];
         form.setFieldsValue({
           sites: sitesArray.map((site, idx) => ({
             key: `site-${idx}`,
@@ -44,11 +42,6 @@ const ServiceUsageRegistration = () => {
       }
     }
   }, [formData, form, t]);
-
-  const validateUniquePhone = (users: User[] = []) => {
-    const phoneNumbers = users.map(u => u.phone).filter(Boolean);
-    return new Set(phoneNumbers).size === phoneNumbers.length;
-  };
 
   const validatePhoneNumberAcrossSites = (getFieldValue: any, t: any) => {
     return {
@@ -112,11 +105,11 @@ const handleFinish = useCallback((values: FormValues2) => {
       ...formData,
       ...formattedData
     });
-    setCurrentStep(4);
+    setCurrentStep((currentStep || 0) + 1);
   } catch (error) {
     console.error('Error in handleFinish:', error);
   }
-}, [updateFormData, setCurrentStep, formData, t]);
+}, [updateFormData, setCurrentStep, formData]);
 
   const next = async () => {
     try {
@@ -128,7 +121,7 @@ const handleFinish = useCallback((values: FormValues2) => {
   };
 
   const prev = () => {
-    setCurrentStep((prevStep) => prevStep - 1);
+    setCurrentStep((currentStep || 1) - 1);
   };
 
   return (
@@ -143,7 +136,7 @@ const handleFinish = useCallback((values: FormValues2) => {
       <Form.List name="sites">
         {(fields) => (
           <div className="my-5 flex flex-col gap-6">
-            {fields.map(({ key, name, ...restField }, siteIndex) => (
+            {fields.map(({ key, name}, siteIndex) => (
               <Card
                 key={key}
                 title={
