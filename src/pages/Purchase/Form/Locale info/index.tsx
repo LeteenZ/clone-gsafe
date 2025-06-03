@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { useVietnamLocation } from '../../../../hooks/useVietnamLocation';
 import ScrollToTop from '../../../../hooks/ScrollToTop';
 import type { District, Ward } from '../../../../hooks/useVietnamLocation';
+import { type } from './../../../../types/SlickSlide';
 
 const SiteInformation = () => {
     const { t } = useTranslation('purchase');
@@ -95,6 +96,7 @@ const SiteInformation = () => {
             layout="vertical"
             initialValues={formData}
             autoComplete="on"
+            onFinish={next}
         >
             <ScrollToTop />
             <Form.List name="sites" initialValue={[{}]}>
@@ -322,7 +324,7 @@ const SiteInformation = () => {
 
                 <button
                     className="flex w-fit min-w-28 items-center justify-center gap-2 whitespace-nowrap rounded-2xl px-6 shadow-[0px_1px_4px_rgba(0,0,0,0.3)] bg-white text-[#475569] hover:text-white hover:bg-[#0266ad] h-10 cursor-pointer"
-                    onClick={next}
+                    type="submit"
                 >
                     <div className="group flex items-center gap-2 text-sm font-medium md:text-base">
                         <p>{t("controls.cn1")}</p>
