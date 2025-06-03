@@ -24,6 +24,7 @@ const OrderPayment = () => {
     const {currentStep, formData, setCurrentStep } = useFormContext();
     const [isProcessing, setIsProcessing] = useState(false);
     const [isComplete, setIsComplete] = useState(false);
+    const [isComplete1, setIsComplete1] = useState(false);
     const [paymentMethod, setPaymentMethod] = useState();
     const [ok, setOk] = useState(false);
     const navigate = useNavigate();
@@ -143,6 +144,7 @@ const OrderPayment = () => {
                         });
                         setIsAgreed2(false);
                         setIsComplete(true);
+                        setIsComplete1(true);
                         setOk(true);
                     }, 2000);
                 } else {
@@ -419,7 +421,7 @@ const OrderPayment = () => {
                                     )}
                                 </div>
                             </button>
-                            {isComplete ? (
+                            {isComplete1 ? (
                                 <CountdownTimer total={grandTotal} ok={ok}/>
                             ) : null}
                         </div>
