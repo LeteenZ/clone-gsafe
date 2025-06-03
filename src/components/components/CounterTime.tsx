@@ -7,12 +7,12 @@ import type { GenerateQRHandle } from './CreateQR';
 import logoGtel from '../../../public/assets/logo-gtel.png';
 import logoNapas from '../../../public/assets/logo-napas.png';
 
-const CountdownTimer: React.FC<{total: number}> = ({total}) => {
+const CountdownTimer: React.FC<{total: number, ok: boolean}> = ({total, ok}) => {
     const navigate = useNavigate();
     const { t } = useTranslation('purchase');
     const [complete, setComplete] = useState(false);
     const [timeLeft, setTimeLeft] = useState(120);
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(ok);
     const qrRef = useRef<GenerateQRHandle>(null);
 
     useEffect(() => {

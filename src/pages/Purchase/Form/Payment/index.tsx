@@ -25,6 +25,7 @@ const OrderPayment = () => {
     const [isProcessing, setIsProcessing] = useState(false);
     const [isComplete, setIsComplete] = useState(false);
     const [paymentMethod, setPaymentMethod] = useState();
+    const [ok, setOk] = useState(false);
     const navigate = useNavigate();
 
     const [isAgreed1, setIsAgreed1] = useState(false);
@@ -142,6 +143,7 @@ const OrderPayment = () => {
                         });
                         setIsAgreed2(false);
                         setIsComplete(true);
+                        setOk(true);
                     }, 2000);
                 } else {
                     setTimeout(() => {
@@ -418,7 +420,7 @@ const OrderPayment = () => {
                                 </div>
                             </button>
                             {isComplete ? (
-                                <CountdownTimer total={grandTotal} />
+                                <CountdownTimer total={grandTotal} ok={ok}/>
                             ) : null}
                         </div>
                     </div>
