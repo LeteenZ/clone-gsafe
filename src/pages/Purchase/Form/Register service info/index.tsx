@@ -32,9 +32,8 @@ const ServiceUsageRegistration = () => {
           .filter(([key]) => key.startsWith('site'))
           .sort(([a], [b]) => a.localeCompare(b));
       
-      const parsedSites = currentSites.map(([_, siteData], index) => {
-          const site = siteData as any;
-          let existingSite = formData?.fm4?.[`site${index + 1}`];
+      const parsedSites = currentSites.map((_, index) => {
+          const existingSite = formData?.fm4?.[`site${index + 1}`];
           
           if (existingSite) {
               const users = (existingSite.users || []).map((user: any) => ({

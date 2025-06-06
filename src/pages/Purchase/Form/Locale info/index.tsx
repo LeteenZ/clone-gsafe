@@ -19,7 +19,7 @@ const SiteInformation = () => {
     const [wards, setWards] = useState<Ward[][]>([]); // Array of wards for each site
 
     // Handle province change
-    const handleProvinceChange = (code: string, fieldName: string, index: number) => {
+    const handleProvinceChange = (code: string, index: number) => {
         const province = provinces.find(p => p.code === code);
         const newDistricts = [...districts];
         newDistricts[index] = province?.districts || [];
@@ -37,9 +37,8 @@ const SiteInformation = () => {
             },
         });
     };
-
-    // Handle district change
-    const handleDistrictChange = (code: string, fieldName: string, index: number) => {
+    
+    const handleDistrictChange = (code: string, index: number) => {
         const district = districts[index]?.find((d: any) => d.code === code);
         const newWards = [...wards];
         newWards[index] = district?.wards || [];
@@ -243,7 +242,7 @@ const SiteInformation = () => {
                                         >
                                             <Select
                                                 placeholder={t("form.form2.plhr4")}
-                                                onChange={(value) => handleProvinceChange(value, `sites.${name}.tinhThanhPho`, index)}
+                                                onChange={(value) => handleProvinceChange(value, index)}
                                             >
                                                 {provinces.map(p => (
                                                     <Select.Option key={p.code} value={p.code}>{p.name}</Select.Option>
@@ -260,7 +259,7 @@ const SiteInformation = () => {
                                         >
                                             <Select
                                                 placeholder={t("form.form2.plhr5")}
-                                                onChange={(value) => handleDistrictChange(value, `sites.${name}.huyen`, index)}
+                                                onChange={(value) => handleDistrictChange(value, index)}
                                             >
                                                 {districts[index]?.map(d => (
                                                     <Select.Option key={d.code} value={d.code}>{d.name}</Select.Option>
