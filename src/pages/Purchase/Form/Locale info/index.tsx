@@ -3,7 +3,7 @@ import { useFormContext } from '../../Form Context';
 import { useTranslation } from 'react-i18next';
 import dayjs from 'dayjs';
 import './index.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useVietnamLocation } from '../../../../hooks/useVietnamLocation';
 import ScrollToTop from '../../../../hooks/ScrollToTop';
 import type { District, Ward } from '../../../../hooks/useVietnamLocation';
@@ -15,39 +15,79 @@ const SiteInformation = () => {
     const [removingKey, setRemovingKey] = useState<number | null>(null);
 
     const { provinces, error } = useVietnamLocation();
-    const [districts, setDistricts] = useState<District[]>([]);
-    const [wards, setWards] = useState<Ward[]>([]);
+    const [districts, setDistricts] = useState<District[][]>([]); // Array of districts for each site
+    const [wards, setWards] = useState<Ward[][]>([]); // Array of wards for each site
 
-    const handleProvinceChange = (code: string, fieldName: string) => {
+    // Handle province change
+    const handleProvinceChange = (code: string, fieldName: string, index: number) => {
         const province = provinces.find(p => p.code === code);
-        setDistricts(province?.districts || []);
-        setWards([]);
+        const newDistricts = [...districts];
+        newDistricts[index] = province?.districts || [];
+        setDistricts(newDistricts);
+        const newWards = [...wards];
+        newWards[index] = [];
+        setWards(newWards);
 
-        const fieldPath = fieldName.split('.');
-        const siteIndex = fieldPath[1];
         form.setFieldsValue({
             sites: {
-                [siteIndex]: {
+                [index]: {
                     huyen: undefined,
-                    xaPhuongThiTran: undefined
-                }
-            }
+                    xaPhuongThiTran: undefined,
+                },
+            },
         });
     };
 
-    const handleDistrictChange = (code: string, fieldName: string) => {
-        const district = districts.find((d: any) => d.code === code);
-        setWards(district?.wards || []);
-        const fieldPath = fieldName.split('.');
-        const siteIndex = fieldPath[1];
+    // Handle district change
+    const handleDistrictChange = (code: string, fieldName: string, index: number) => {
+        const district = districts[index]?.find((d: any) => d.code === code);
+        const newWards = [...wards];
+        newWards[index] = district?.wards || [];
+        setWards(newWards);
+
         form.setFieldsValue({
             sites: {
-                [siteIndex]: {
-                    xaPhuongThiTran: undefined
-                }
-            }
+                [index]: {
+                    xaPhuongThiTran: undefined,
+                },
+            },
         });
     };
+
+    useEffect(() => {
+        if (formData.fm2) {
+            const sites = Object.keys(formData.fm2).map(key => ({
+                ...formData.fm2[key],
+                ngayLapDat: formData.fm2[key].ngayLapDat ? dayjs(formData.fm2[key].ngayLapDat) : undefined,
+            }));
+
+            const newDistricts: District[][] = [];
+            const newWards: Ward[][] = [];
+            sites.forEach((site, index) => {
+                if (site.tinhThanhPho) {
+                    const province = provinces.find(p => p.code === site.tinhThanhPho);
+                    newDistricts[index] = province?.districts || [];
+                } else {
+                    newDistricts[index] = [];
+                }
+
+                if (site.huyen) {
+                    const district = newDistricts[index]?.find(d => d.code === site.huyen);
+                    newWards[index] = district?.wards || [];
+                } else {
+                    newWards[index] = [];
+                }
+            });
+
+            setDistricts(newDistricts);
+            setWards(newWards);
+
+            form.setFieldsValue({
+                sites,
+            });
+        }
+    }, [formData, provinces, form]);
+
     if (error) return <div>{error}</div>;
 
     const disablePastDates = (current: dayjs.Dayjs) => {
@@ -67,19 +107,22 @@ const SiteInformation = () => {
 
     const next = async () => {
         try {
-            const values = await form.validateFields(); 
+            const values = await form.validateFields();
             const formattedData = {
                 fm2: values.sites.reduce((acc: any, site: any, index: number) => {
-                  acc[`site${index + 1}`] = site;
-                  return acc;
-                }, {})
-              };
-        
-              updateFormData({
+                    acc[`site${index + 1}`] = {
+                        ...site,
+                        ngayLapDat: site.ngayLapDat ? site.ngayLapDat.format('YYYY-MM-DD') : undefined,
+                    };
+                    return acc;
+                }, {}),
+            };
+
+            updateFormData({
                 ...formData,
-                ...formattedData
-              });
-              await setCurrentStep((currentStep || 0) + 1);
+                ...formattedData,
+            });
+            await setCurrentStep((currentStep || 0) + 1);
         } catch (error) {
             console.error('Error in handleFinish:', error);
         }
@@ -93,12 +136,12 @@ const SiteInformation = () => {
         <Form
             form={form}
             layout="vertical"
-            initialValues={formData}
+            initialValues={{ sites: [{}] }}
             autoComplete="on"
             onFinish={next}
         >
             <ScrollToTop />
-            <Form.List name="sites" initialValue={[{}]}>
+            <Form.List name="sites">
                 {(fields, { add, remove }) => (
                     <div className="my-5 flex flex-col gap-6">
                         {fields.map(({ key, name, ...restField }, index) => (
@@ -106,7 +149,7 @@ const SiteInformation = () => {
                                 key={key} 
                                 className={`transition-all ease-in-out ${
                                     removingKey === key ? 'slide-out-up' : 'slide-in-down'
-                                  }`}
+                                }`}
                             >
                                 <div className="flex justify-between">
                                     <p className="text-lg font-semibold text-[#0f68ad]">{t("form.form2.tittle")} {index + 1}</p>
@@ -200,7 +243,7 @@ const SiteInformation = () => {
                                         >
                                             <Select
                                                 placeholder={t("form.form2.plhr4")}
-                                                onChange={(value) => handleProvinceChange(value, `sites.${name}.tinhThanhPho`)}
+                                                onChange={(value) => handleProvinceChange(value, `sites.${name}.tinhThanhPho`, index)}
                                             >
                                                 {provinces.map(p => (
                                                     <Select.Option key={p.code} value={p.code}>{p.name}</Select.Option>
@@ -217,9 +260,9 @@ const SiteInformation = () => {
                                         >
                                             <Select
                                                 placeholder={t("form.form2.plhr5")}
-                                                onChange={(value) => handleDistrictChange(value, `sites.${name}.huyen`)}
+                                                onChange={(value) => handleDistrictChange(value, `sites.${name}.huyen`, index)}
                                             >
-                                                {districts.map(d => (
+                                                {districts[index]?.map(d => (
                                                     <Select.Option key={d.code} value={d.code}>{d.name}</Select.Option>
                                                 ))}
                                             </Select>
@@ -235,7 +278,7 @@ const SiteInformation = () => {
                                             <Select
                                                 placeholder={t("form.form2.plhr6")}
                                             >
-                                                {wards.map(w => (
+                                                {wards[index]?.map(w => (
                                                     <Select.Option key={w.code} value={w.code}>{w.name}</Select.Option>
                                                 ))}
                                             </Select>

@@ -2,11 +2,18 @@ import { Form, Input } from 'antd';
 import { useFormContext } from '../../Form Context';
 import { useTranslation } from 'react-i18next';
 import ScrollToTop from '../../../../hooks/ScrollToTop';
+import { useEffect } from 'react';
 
 const CustomerInformation = () => {
     const { t } = useTranslation('purchase');
     const [form] = Form.useForm();
-    const {currentStep, updateFormData, setCurrentStep } = useFormContext();
+    const {currentStep, updateFormData, setCurrentStep, formData } = useFormContext();
+
+    useEffect(() => {
+        if (formData.fm1) {
+            form.setFieldsValue(formData.fm1);
+        }
+    }, [form, formData.fm1]);
 
     const next = async () => {
         try {

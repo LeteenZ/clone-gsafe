@@ -25,6 +25,7 @@ const OrderPayment = () => {
     const [isProcessing, setIsProcessing] = useState(false);
     const [isComplete, setIsComplete] = useState(false);
     const [isComplete1, setIsComplete1] = useState(false);
+    const [isComplete2, setIsComplete2] = useState(false);
     const [paymentMethod, setPaymentMethod] = useState();
     const [ok, setOk] = useState(false);
     const navigate = useNavigate();
@@ -145,6 +146,7 @@ const OrderPayment = () => {
                         setIsAgreed2(false);
                         setIsComplete(true);
                         setIsComplete1(true);
+                        setIsComplete2(true);
                         setOk(true);
                     }, 2000);
                 } else {
@@ -179,15 +181,16 @@ const OrderPayment = () => {
                         });
                         setIsAgreed2(false);
                         setIsComplete(true);
+                        setIsComplete2(true);
                         setTimeout(() => {
                             navigate('/');
                         }, 5000);
                     }, 2000);
                 }
-              } catch (error) {
-                console.error('Validation failed:', error);
-                setIsProcessing(false);
-              }
+            } catch (error) {
+            console.error('Validation failed:', error);
+            setIsProcessing(false);
+            }
         }
     }
     
@@ -430,8 +433,12 @@ const OrderPayment = () => {
             </div>
             <div className="flex justify-between pt-10">
                 <button
-                    className="flex w-fit min-w-28 items-center justify-center gap-2 whitespace-nowrap rounded-2xl px-6 shadow-[0px_1px_4px_rgba(0,0,0,0.3)] bg-white text-[#475569] hover:text-white hover:bg-[#0266ad] h-10 cursor-pointer"
+                    className={`
+                        flex w-fit min-w-28 items-center justify-center gap-2 whitespace-nowrap rounded-2xl px-6 shadow-[0px_1px_4px_rgba(0,0,0,0.3)] bg-white text-[#475569] h-10
+                        ${!isComplete2 ? 'hover:text-white hover:bg-[#0266ad] cursor-pointer' : 'bg-[#cad0d6] text-[#a8aeb6]'}
+                    `}
                     onClick={prev}
+                    disabled={isComplete2}
                 >
                     <div className="group flex items-center gap-2 text-sm font-medium md:text-base">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -445,7 +452,10 @@ const OrderPayment = () => {
                 </button>
 
                 <button
-                    className="flex w-fit min-w-28 items-center justify-center gap-2 whitespace-nowrap rounded-2xl px-6 shadow-[0px_1px_4px_rgba(0,0,0,0.3)] bg-white text-slate-600 hover:text-white hover:bg-[#0266ad] h-10 cursor-pointer"
+                    className={`
+                        flex w-fit min-w-28 items-center justify-center gap-2 whitespace-nowrap rounded-2xl px-6 shadow-[0px_1px_4px_rgba(0,0,0,0.3)] bg-white text-[#475569] h-10
+                        ${isComplete ? 'hover:text-white hover:bg-[#0266ad] cursor-pointer' : 'bg-[#cad0d6] text-[#a8aeb6]'}
+                    `}
                     onClick={handleFinish}
                     disabled={!isComplete}
                 >

@@ -26,22 +26,45 @@ const ServiceUsageRegistration = () => {
   const [form] = Form.useForm<FormValues2>();
 
   useEffect(() => {
-    if (formData?.fm3) {
-      try {
-        const sitesArray = Object.values(formData.fm3) as SiteData2[];
-        form.setFieldsValue({
-          sites: sitesArray.map((site, idx) => ({
-            key: `site-${idx}`,
-            mainOption: site.mainOption,
-            priceOption: site.priceOption,
-            users: Array(2).fill({ name: '', phone: '' })
-          }))
-        });
-      } catch (error) {
-        console.error('Error initializing form data:', error);
-      }
-    }
-  }, [formData, form, t]);
+      if (!formData?.fm2) return;
+      
+      const currentSites = Object.entries(formData.fm2)
+          .filter(([key]) => key.startsWith('site'))
+          .sort(([a], [b]) => a.localeCompare(b));
+      
+      const parsedSites = currentSites.map(([_, siteData], index) => {
+          const site = siteData as any;
+          let existingSite = formData?.fm4?.[`site${index + 1}`];
+          
+          if (existingSite) {
+              const users = (existingSite.users || []).map((user: any) => ({
+                  name: user?.name?.trim() || '',
+                  phone: user?.phone?.trim() || ''
+              }));
+  
+              while (users.length < 2) {
+                  users.push({ name: '', phone: '' });
+              }
+  
+              return {
+                  key: `site-${index}`,
+                  mainOption: existingSite.mainOption,
+                  priceOption: existingSite.priceOption,
+                  users
+              };
+          }
+          
+          return {
+              key: `site-${index}`,
+              mainOption: undefined,
+              priceOption: undefined,
+              users: Array(2).fill({ name: '', phone: '' })
+          };
+      });
+  
+      form.setFieldsValue({ sites: parsedSites });
+  }, [formData, form]);
+  
 
   const validatePhoneNumberAcrossSites = (getFieldValue: any, t: any) => {
     return {
@@ -79,7 +102,7 @@ const ServiceUsageRegistration = () => {
       optionC: 5,
       optionD: 2
     };
-    return limits[mainOption] || 2; // Default to 2 if mainOption is not found
+    return limits[mainOption] || 2;
   };
 
 const handleFinish = useCallback((values: FormValues2) => {
@@ -93,8 +116,8 @@ const handleFinish = useCallback((values: FormValues2) => {
         return {
           ...acc,
           [`site${index + 1}`]: {
-            mainOption: site.mainOption,
-            priceOption: site.priceOption,
+            // mainOption: site.mainOption,
+            // priceOption: site.priceOption,
             users: validUsers
           }
         };

@@ -34,19 +34,29 @@ const ServicePackageAndCycle = () => {
   useEffect(() => {
     if (formData?.fm2) {
       try {
-        const sitesArray = Object.values(formData.fm2) as SiteData[];
-        form.setFieldsValue({
-          sites: sitesArray.map((_, idx) => ({
-            key: `site-${idx}`,
-            services: {},
-            mainOption: undefined,
-            priceOption: undefined
-          }))
-        });
+        const sitesArray = Object.entries(formData.fm2)
+                .filter(([key]) => key.startsWith('site'))
+                .sort(([a], [b]) => a.localeCompare(b))
+                .map(([_, siteData], index) => {
+                    const existingSite = formData.fm3?.[`site${index + 1}`] || {};
+                    return {
+                        ...(siteData as SiteData),
+                        ...existingSite,
+                        key: `site-${index}`,
+                        services: existingSite.services || {},
+                        mainOption: existingSite.mainOption || undefined,
+                        priceOption: existingSite.priceOption || undefined
+                    };
+                });
+
+            form.setFieldsValue({
+                sites: sitesArray
+            });
       } catch (error) {
         console.error('Error initializing form data:', error);
       }
     }
+    
   }, [formData, form, t]);
 
   const handleFinish = useCallback((values: FormValues) => {
